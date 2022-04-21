@@ -1,0 +1,15 @@
+ --- Initial State ---
+
+docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED                  STATUS                  PORTS     NAMES
+5fff15b9f397   nginx     "/docker-entrypoint.…"   Less than a second ago   Up Less than a second   80/tcp    nginx3
+6b9a4b6c1846   nginx     "/docker-entrypoint.…"   Less than a second ago   Up Less than a second   80/tcp    nginx2
+7e89f0527cbe   nginx     "/docker-entrypoint.…"   Less than a second ago   Up Less than a second   80/tcp    nginx1
+
+---Final State---
+
+docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED        STATUS                              PORTS     NAMES
+5fff15b9f397   nginx     "/docker-entrypoint.…"   1 second ago   Up Less than a second               80/tcp    nginx3
+6b9a4b6c1846   nginx     "/docker-entrypoint.…"   1 second ago   Exited (0) Less than a second ago             nginx2
+7e89f0527cbe   nginx     "/docker-entrypoint.…"   1 second ago   Exited (0) Less than a second ago             nginx1
