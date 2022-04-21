@@ -1,0 +1,19 @@
+--- Initial State ---
+
+docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                      PORTS     NAMES     SIZE
+201c0be2f7f2   nginx     "/docker-entrypoint.…"   18 seconds ago   Up 17 seconds               80/tcp    nginx3    1.09kB (virtual 134MB)
+7a47cfac3c04   nginx     "/docker-entrypoint.…"   18 seconds ago   Exited (0) 17 seconds ago             nginx2    1.09kB (virtual 134MB)
+a82b41f69fb5   nginx     "/docker-entrypoint.…"   18 seconds ago   Exited (0) 17 seconds ago             nginx1    1.09kB (virtual 134MB)
+
+docker images
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+nginx        latest    d17025d71df5   22 hours ago   134MB
+
+--- Final State ---
+
+docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
